@@ -1,0 +1,23 @@
+<h1>Listing mothers</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @mothers.each do |mother| %>
+  <tr>
+    <td><%= mother.name %></td>
+    <td><%= link_to 'Show', mother %></td>
+    <td><%= link_to 'Edit', edit_mother_path(mother) %></td>
+    <td><%= link_to 'Destroy', mother, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Mother', new_mother_path %>

@@ -5,13 +5,14 @@ p {
 	color: #00FF00;
 	text-align: center;
 }
-#especial
-{
-  background-color: red;
-  color: black;
-}
+
 .resaltado
 {
   background-color: white;
 }
 
+#especial
+{
+  background-color: red;
+  color: black;
+}

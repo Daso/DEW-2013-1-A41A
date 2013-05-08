@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @mother.name %>
+</p>
+<table>
+   <% @mother.gifts.each do |gift| %>
+   	<tr>
+   		<td><%= gift.name %></td>
+   	</tr>
+   <% end %>
+</table>
+
+<%= link_to 'Edit', edit_mother_path(@mother) %> |
+<%= link_to 'Back', mothers_path %>
