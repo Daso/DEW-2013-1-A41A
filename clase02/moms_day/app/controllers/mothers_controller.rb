@@ -10,11 +10,15 @@ class MothersController < ApplicationController
     end
   end
 
+def total    
+    @total = @mother.gifts.sum(:price)    
+ end
+
   # GET /mothers/1
   # GET /mothers/1.json
   def show
     @mother = Mother.find(params[:id])
-
+    total
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @mother }
