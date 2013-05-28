@@ -1,0 +1,28 @@
+<h1>Chat Amixer</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Content</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<ul id="chat_container">
+
+<% @messages.each do |message| %>
+  
+    <li>
+      <%= message.name %> dijo: <%= message.content %>
+    </li>
+  
+<% end %>
+
+</ul>
+
+</table>
+
+<br />
+
+<%= render 'form' %>
