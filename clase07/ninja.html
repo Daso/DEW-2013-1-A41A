@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<title>Ninja</title>
+       <script>
+        var x = 0;
+        var y = 0;  
+        function moverImagen(direction){
+          switch(direction.keyCode){
+            case 38:
+              y -= 5;
+              document.getElementById("imagen").style.top = String(y)+"px";
+              break;
+             
+             case 39:
+             x -= 5;
+             document.getElementById("imagen").style.right = String(x)+"px";
+             break;
+             
+             case 40:
+             y += 5;
+             document.getElementById("imagen").style.top = String(y)+"px";
+             break;
+
+             case 37:
+             x += 5;
+             document.getElementById("imagen").style.right =String(x)+"px";
+             break;
+
+
+
+          }  
+        }
+
+
+       </script>
+  </head>
+  <body onkeyup="moverImagen(event);">
+    <img src="ninja.jpg" id="imagen"  style="position:relative;" alt="ninja_asesino" />
+  </body>
+</html>
